@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ahmed Al-Dumoor | CV</title>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+    --main: #2563eb;
+    --dark: #0f172a;
+    --light: #f8fafc;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--light);
+    color: #1e293b;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--main);
+}
+
+/* DARK MODE BUTTON */
+#darkBtn {
+    background: var(--main);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#darkBtn:hover {
+    background: #1e40af;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: .9;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: var(--main);
+    margin-bottom: 25px;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
+
+/* BUTTON */
+button {
+    margin-top: 15px;
+    background: var(--main);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* DARK MODE STYLES */
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+.dark nav {
+    background: #1f2937;
+}
+
+.dark .card {
+    background: #1e293b;
+    color: white;
+}
+
+.dark footer {
+    background: #111827;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    header h1 { font-size: 30px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#languages">Languages</a>
+    <button id="darkBtn">Dark Mode</button>
+</nav>
+
+<header>
+    <h1>Ahmed Mohammad Al-Dmoor</h1>
+    <p>ahmaddmoor@gmail.com | +962 787 970 421</p>
+    <p>Studying IT</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        I am a motivated and hardworking individual with a strong interest in technology and
+        continuous learning. I enjoy teamwork, problem-solving, and personal development.
+        <br>
+        <button onclick="hello()">Say Hello</button>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card skill" data-skill="90">Communication</div>
+        <div class="card skill" data-skill="85">Teamwork</div>
+        <div class="card skill" data-skill="80">Problem Solving</div>
+        <div class="card skill" data-skill="85">Time Management</div>
+        <div class="card skill" data-skill="75">Microsoft Office</div>
+        <div class="card skill" data-skill="90">Fast Learner</div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Work Experience</h2>
+    <div class="card">
+        <h3>Previous Job Title</h3>
+        <p><strong>Company Name – Jordan</strong></p>
+        <ul>
+            <li>Handled daily tasks</li>
+            <li>Worked in a team environment</li>
+            <li>Maintained productivity</li>
+        </ul>
+    </div>
+</section>
+
+<section id="certificates">
+    <h2>Certificates & Courses</h2>
+    <div class="card">
+        <ul>
+            <li>Computer Skills Certificate</li>
+            <li>Personal Development Course</li>
+            <li>Customer Service Training</li>
+            <li>Workplace Safety Course</li>
+        </ul>
+    </div>
+</section>
+
+<section id="languages">
+    <h2>Languages</h2>
+    <div class="grid">
+        <div class="card">Arabic – Native</div>
+        <div class="card">English – Good</div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        © 2026 Ahmed Mohammad Al-Dmoor
+    </div>
+    <div style="margin-top: 10px;">
+        <a href="https://instagram.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</footer>
+
+<script>
+function hello() {
+    let name = prompt("What is your name?");
+    if (name) {
+        alert("Welcome " + name + "! Thanks for visiting my CV 😊");
+    }
+}
+
+// Dark Mode Toggle
+document.getElementById("darkBtn").addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+});
+
+// Skills Animation
+const skills = document.querySelectorAll(".skill");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const level = entry.target.getAttribute("data-skill");
+      let count = 0;
+      const interval = setInterval(() => {
+        if (count >= level) {
+          clearInterval(interval);
+        } else {
+          count++;
+          entry.target.innerHTML = entry.target.innerText.split(" –")[0] + " – " + count + "%";
+        }
+      }, 15);
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+skills.forEach(skill => observer.observe(skill));
+</script>
+
+</body>
+</html>
